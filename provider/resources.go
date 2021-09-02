@@ -19,8 +19,7 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"github.com/alphagov/terraform-provider-concourse/pkg/provider"
-	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	concourse "github.com/alphagov/terraform-provider-concourse/pkg/provider"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
@@ -101,6 +100,7 @@ func Provider() tfbridge.ProviderInfo {
 		Keywords:    []string{"pulumi", "concourse"},
 		License:     "Apache-2.0",
 		Homepage:    "https://pulumi.io",
+		GitHubOrg:   "chanzuckerberg",
 		Repository:  "https://github.com/ringods/pulumi-concourse",
 		Config:      map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
@@ -118,14 +118,7 @@ func Provider() tfbridge.ProviderInfo {
 			// are below - the single line form is the common case. The multi-line form is
 			// needed only if you wish to override types or other default options.
 			//
-			// "aws_iam_role": {Tok: makeResource(mainMod, "IamRole")}
-			//
-			// "aws_acm_certificate": {
-			// 	Tok: makeResource(mainMod, "Certificate"),
-			// 	Fields: map[string]*tfbridge.SchemaInfo{
-			// 		"tags": {Type: makeType(mainPkg, "Tags")},
-			// 	},
-			// },
+			// "resource_name": {Tok: makeResource(mainMod, "ResourceName")}
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi function. An example
