@@ -113,17 +113,20 @@ func Provider() tfbridge.ProviderInfo {
 			// },
 		},
 		PreConfigureCallback: preConfigureCallback,
-		Resources:            map[string]*tfbridge.ResourceInfo{
+		Resources: map[string]*tfbridge.ResourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi type. Two examples
 			// are below - the single line form is the common case. The multi-line form is
 			// needed only if you wish to override types or other default options.
 			//
-			// "resource_name": {Tok: makeResource(mainMod, "ResourceName")}
+			"concourse_pipeline": {Tok: makeResource(mainMod, "Pipeline")},
+			"concourse_team":     {Tok: makeResource(mainMod, "Team")},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi function. An example
 			// is below.
-			// "aws_ami": {Tok: makeDataSource(mainMod, "getAmi")},
+			"concourse_pipeline": {Tok: makeDataSource(mainMod, "getPipeline")},
+			"concourse_team":     {Tok: makeDataSource(mainMod, "getTeam")},
+			"concourse_teams":    {Tok: makeDataSource(mainMod, "getTeams")},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			// List any npm dependencies and their versions

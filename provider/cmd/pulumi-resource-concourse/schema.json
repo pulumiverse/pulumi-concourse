@@ -83,6 +83,343 @@
             }
         }
     },
+    "resources": {
+        "concourse:index/pipeline:Pipeline": {
+            "properties": {
+                "isExposed": {
+                    "type": "boolean"
+                },
+                "isPaused": {
+                    "type": "boolean"
+                },
+                "json": {
+                    "type": "string"
+                },
+                "pipelineConfig": {
+                    "type": "string"
+                },
+                "pipelineConfigFormat": {
+                    "type": "string"
+                },
+                "pipelineName": {
+                    "type": "string"
+                },
+                "teamName": {
+                    "type": "string"
+                },
+                "yaml": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "isExposed",
+                "isPaused",
+                "json",
+                "pipelineConfig",
+                "pipelineConfigFormat",
+                "pipelineName",
+                "teamName",
+                "yaml"
+            ],
+            "inputProperties": {
+                "isExposed": {
+                    "type": "boolean"
+                },
+                "isPaused": {
+                    "type": "boolean"
+                },
+                "pipelineConfig": {
+                    "type": "string"
+                },
+                "pipelineConfigFormat": {
+                    "type": "string"
+                },
+                "pipelineName": {
+                    "type": "string"
+                },
+                "teamName": {
+                    "type": "string"
+                }
+            },
+            "requiredInputs": [
+                "isExposed",
+                "isPaused",
+                "pipelineConfig",
+                "pipelineConfigFormat",
+                "pipelineName",
+                "teamName"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Pipeline resources.\n",
+                "properties": {
+                    "isExposed": {
+                        "type": "boolean"
+                    },
+                    "isPaused": {
+                        "type": "boolean"
+                    },
+                    "json": {
+                        "type": "string"
+                    },
+                    "pipelineConfig": {
+                        "type": "string"
+                    },
+                    "pipelineConfigFormat": {
+                        "type": "string"
+                    },
+                    "pipelineName": {
+                        "type": "string"
+                    },
+                    "teamName": {
+                        "type": "string"
+                    },
+                    "yaml": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "concourse:index/team:Team": {
+            "properties": {
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "owners": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "pipelineOperators": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "teamName": {
+                    "type": "string"
+                },
+                "viewers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "owners",
+                "teamName"
+            ],
+            "inputProperties": {
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "owners": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "pipelineOperators": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "teamName": {
+                    "type": "string"
+                },
+                "viewers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "owners",
+                "teamName"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Team resources.\n",
+                "properties": {
+                    "members": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "owners": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pipelineOperators": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "teamName": {
+                        "type": "string"
+                    },
+                    "viewers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "functions": {
+        "concourse:index/getPipeline:getPipeline": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getPipeline.\n",
+                "properties": {
+                    "pipelineName": {
+                        "type": "string"
+                    },
+                    "teamName": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "pipelineName",
+                    "teamName"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getPipeline.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "isExposed": {
+                        "type": "boolean"
+                    },
+                    "isPaused": {
+                        "type": "boolean"
+                    },
+                    "json": {
+                        "type": "string"
+                    },
+                    "pipelineName": {
+                        "type": "string"
+                    },
+                    "teamName": {
+                        "type": "string"
+                    },
+                    "yaml": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "isExposed",
+                    "isPaused",
+                    "json",
+                    "pipelineName",
+                    "teamName",
+                    "yaml",
+                    "id"
+                ]
+            }
+        },
+        "concourse:index/getTeam:getTeam": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getTeam.\n",
+                "properties": {
+                    "teamName": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "teamName"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getTeam.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "members": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "owners": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pipelineOperators": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "teamName": {
+                        "type": "string"
+                    },
+                    "viewers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "members",
+                    "owners",
+                    "pipelineOperators",
+                    "teamName",
+                    "viewers",
+                    "id"
+                ]
+            }
+        },
+        "concourse:index/getTeams:getTeams": {
+            "outputs": {
+                "description": "A collection of values returned by getTeams.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "names": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "names",
+                    "id"
+                ]
+            }
+        }
+    },
     "language": {
         "csharp": {
             "compatibility": "tfbridge20",
