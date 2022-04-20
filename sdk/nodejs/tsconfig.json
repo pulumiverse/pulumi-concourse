@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "bin",
+        "target": "es2016",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": true,
+        "sourceMap": true,
+        "stripInternal": true,
+        "experimentalDecorators": true,
+        "noFallthroughCasesInSwitch": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true
+    },
+    "files": [
+        "config/index.ts",
+        "config/vars.ts",
+        "getPipeline.ts",
+        "getTeam.ts",
+        "getTeams.ts",
+        "index.ts",
+        "pipeline.ts",
+        "provider.ts",
+        "team.ts",
+        "utilities.ts"
+    ]
+}

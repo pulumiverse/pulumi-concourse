@@ -1,0 +1,5 @@
+{
+  "resource": true,
+  "name": "concourse",
+  "server": "https://github.com/pulumiverse/pulumi-concourse/releases/download/${VERSION}"
+}

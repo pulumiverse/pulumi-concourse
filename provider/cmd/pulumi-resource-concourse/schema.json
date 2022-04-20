@@ -1,14 +1,19 @@
 {
     "name": "concourse",
-    "description": "A Pulumi package for creating and managing a Concourse instance \u0026 its pipelines.",
+    "displayName": "Concourse",
+    "description": "A Pulumi package for creating and managing a Concourse instance and its pipelines.",
     "keywords": [
         "pulumi",
-        "concourse"
+        "concourse",
+        "category/utility"
     ],
-    "homepage": "https://pulumi.io",
+    "homepage": "https://github.com/pulumiverse",
     "license": "Apache-2.0",
-    "attribution": "This Pulumi package is based on the [`concourse` Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-concourse).",
-    "repository": "https://github.com/ringods/pulumi-concourse",
+    "attribution": "This Pulumi package is based on the [`concourse` Terraform Provider](https://github.com/alphagov/terraform-provider-concourse).",
+    "repository": "https://github.com/pulumiverse/pulumi-concourse",
+    "logoUrl": "https://raw.githubusercontent.com/pulumiverse/.github/main/assets/mascot.png",
+    "pluginDownloadURL": "https://github.com/pulumiverse/pulumi-concourse/releases/download/${VERSION}",
+    "publisher": "Pulumiverse",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"
     },
@@ -425,13 +430,14 @@
             "compatibility": "tfbridge20",
             "namespaces": null,
             "packageReferences": {
-                "Pulumi": "3.*",
-                "System.Collections.Immutable": "1.6.0"
-            }
+                "Pulumi": "3.*"
+            },
+            "rootNamespace": "Pulumiverse"
         },
         "go": {
+            "generateExtraInputTypes": true,
             "generateResourceContainerTypes": true,
-            "importBasePath": "github.com/pulumi/pulumi-concourse/sdk/go/concourse"
+            "importBasePath": "github.com/pulumiverse/pulumi-concourse/sdk/go/concourse"
         },
         "nodejs": {
             "compatibility": "tfbridge20",
@@ -443,14 +449,15 @@
                 "@types/node": "^10.0.0"
             },
             "disableUnionOutputTypes": true,
-            "packageDescription": "A Pulumi package for creating and managing a Concourse instance \u0026 its pipelines.",
-            "packageName": "",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-concourse)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-concourse` repo](https://github.com/pulumi/pulumi-concourse/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`chanzuckerberg/terraform-provider-concourse` repo](https://github.com/chanzuckerberg/terraform-provider-concourse/issues).",
+            "packageDescription": "A Pulumi package for creating and managing a Concourse instance and its pipelines.",
+            "packageName": "@pulumiverse/concourse",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/alphagov/terraform-provider-concourse)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-concourse` repo](https://github.com/pulumi/pulumi-concourse/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`alphagov/terraform-provider-concourse` repo](https://github.com/alphagov/terraform-provider-concourse/issues).",
             "typescriptVersion": ""
         },
         "python": {
             "compatibility": "tfbridge20",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-concourse)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-concourse` repo](https://github.com/pulumi/pulumi-concourse/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`chanzuckerberg/terraform-provider-concourse` repo](https://github.com/chanzuckerberg/terraform-provider-concourse/issues).",
+            "packageName": "pulumiverse_concourse",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/alphagov/terraform-provider-concourse)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-concourse` repo](https://github.com/pulumi/pulumi-concourse/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`alphagov/terraform-provider-concourse` repo](https://github.com/alphagov/terraform-provider-concourse/issues).",
             "requires": {
                 "pulumi": "\u003e=3.0.0,\u003c4.0.0"
             }

@@ -94,15 +94,38 @@ func Provider() tfbridge.ProviderInfo {
 
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
-		P:           p,
-		Name:        "concourse",
-		Description: "A Pulumi package for creating and managing a Concourse instance & its pipelines.",
-		Keywords:    []string{"pulumi", "concourse"},
-		License:     "Apache-2.0",
-		Homepage:    "https://pulumi.io",
-		GitHubOrg:   "chanzuckerberg",
-		Repository:  "https://github.com/ringods/pulumi-concourse",
-		Config:      map[string]*tfbridge.SchemaInfo{
+		P:    p,
+		Name: "concourse",
+		// DisplayName is a way to be able to change the casing of the provider
+		// name when being displayed on the Pulumi registry
+		DisplayName: "Concourse",
+		// The default publisher for all packages is Pulumi.
+		// Change this to your personal name (or a company name) that you
+		// would like to be shown in the Pulumi Registry if this package is published
+		// there.
+		Publisher: "Pulumiverse",
+		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
+		// if this package is published there.
+		//
+		// You may host a logo on a domain you control or add an SVG logo for your package
+		// in your repository and use the raw content URL for that file as your logo URL.
+		LogoURL: "https://raw.githubusercontent.com/pulumiverse/.github/main/assets/mascot.png",
+		// PluginDownloadURL is an optional URL used to download the Provider
+		// for use in Pulumi programs
+		// e.g https://github.com/org/pulumi-provider-name/releases/
+		PluginDownloadURL: "https://github.com/pulumiverse/pulumi-concourse/releases/download/${VERSION}",
+		Description:       "A Pulumi package for creating and managing a Concourse instance and its pipelines.",
+		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
+		// For all available categories, see `Keywords` in
+		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
+		Keywords:   []string{"pulumi", "concourse", "category/utility"},
+		License:    "Apache-2.0",
+		Homepage:   "https://github.com/pulumiverse",
+		Repository: "https://github.com/pulumiverse/pulumi-concourse",
+
+		// The GitHub Org for the provider - defaults to `terraform-providers`
+		GitHubOrg: "alphagov",
+		Config:    map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
 			// no additional points are required.
 			// "region": {
@@ -129,6 +152,7 @@ func Provider() tfbridge.ProviderInfo {
 			"concourse_teams":    {Tok: makeDataSource(mainMod, "getTeams")},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
+			PackageName: "@pulumiverse/concourse",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
@@ -143,6 +167,7 @@ func Provider() tfbridge.ProviderInfo {
 			//Overlay: &tfbridge.OverlayInfo{},
 		},
 		Python: &tfbridge.PythonInfo{
+			PackageName: "pulumiverse_concourse",
 			// List any Python dependencies and their version ranges
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
@@ -150,7 +175,7 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/pulumi/pulumi-%[1]s/sdk/", mainPkg),
+				fmt.Sprintf("github.com/pulumiverse/pulumi-%[1]s/sdk/", mainPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				mainPkg,
@@ -159,9 +184,9 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		CSharp: &tfbridge.CSharpInfo{
 			PackageReferences: map[string]string{
-				"Pulumi":                       "3.*",
-				"System.Collections.Immutable": "1.6.0",
+				"Pulumi": "3.*",
 			},
+			RootNamespace: "Pulumiverse",
 		},
 	}
 
