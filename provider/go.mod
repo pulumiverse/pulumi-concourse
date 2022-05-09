@@ -8,8 +8,10 @@ replace (
 )
 
 require (
+	cloud.google.com/go/iam v0.3.0 // indirect
+	cloud.google.com/go/trace v1.2.0 // indirect
 	github.com/alphagov/terraform-provider-concourse v0.0.0-20210326133208-3f95e2c58dd9
 	github.com/hashicorp/terraform-plugin-sdk v1.9.1 // indirect
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.21.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.23.0
 	github.com/pulumi/pulumi/sdk/v3 v3.32.1
 )
