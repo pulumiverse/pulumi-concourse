@@ -10,6 +10,6 @@ replace (
 require (
 	github.com/alphagov/terraform-provider-concourse v0.0.0-20210326133208-3f95e2c58dd9
 	github.com/hashicorp/terraform-plugin-sdk v1.9.1 // indirect
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.21.0
-	github.com/pulumi/pulumi/sdk/v3 v3.33.2
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.30.1
+	github.com/pulumi/pulumi/sdk/v3 v3.40.1
 )
