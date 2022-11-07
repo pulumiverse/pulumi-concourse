@@ -14,7 +14,7 @@ namespace Pulumiverse.Concourse.Inputs
     /// <summary>
     /// Task step
     /// </summary>
-    public sealed class TaskArgs : Pulumi.ResourceArgs
+    public sealed class TaskArgs : global::Pulumi.ResourceArgs
     {
         [Input("identifier", required: true)]
         public Input<string> Identifier { get; set; } = null!;
@@ -22,5 +22,6 @@ namespace Pulumiverse.Concourse.Inputs
         public TaskArgs()
         {
         }
+        public static new TaskArgs Empty => new TaskArgs();
     }
 }

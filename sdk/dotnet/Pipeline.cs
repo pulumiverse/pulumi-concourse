@@ -11,7 +11,7 @@ using Pulumi;
 namespace Pulumiverse.Concourse
 {
     [ConcourseResourceType("concourse:index:Pipeline")]
-    public partial class Pipeline : Pulumi.CustomResource
+    public partial class Pipeline : global::Pulumi.CustomResource
     {
         /// <summary>
         /// Create a Pipeline resource with the given unique name, arguments, and options.
@@ -55,7 +55,7 @@ namespace Pulumiverse.Concourse
         }
     }
 
-    public sealed class PipelineArgs : Pulumi.ResourceArgs
+    public sealed class PipelineArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
         /// Pipeline configuration
@@ -72,5 +72,6 @@ namespace Pulumiverse.Concourse
         public PipelineArgs()
         {
         }
+        public static new PipelineArgs Empty => new PipelineArgs();
     }
 }

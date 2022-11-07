@@ -14,7 +14,7 @@ namespace Pulumiverse.Concourse.Inputs
     /// <summary>
     /// Job configuration
     /// </summary>
-    public sealed class JobArgs : Pulumi.ResourceArgs
+    public sealed class JobArgs : global::Pulumi.ResourceArgs
     {
         [Input("identifier", required: true)]
         public Input<string> Identifier { get; set; } = null!;
@@ -30,5 +30,6 @@ namespace Pulumiverse.Concourse.Inputs
         public JobArgs()
         {
         }
+        public static new JobArgs Empty => new JobArgs();
     }
 }
