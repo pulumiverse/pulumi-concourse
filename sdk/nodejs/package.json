@@ -1,0 +1,26 @@
+{
+    "name": "@pulumiverse/concourse",
+    "version": "${VERSION}",
+    "keywords": [
+        "pulumi",
+        "concourse",
+        "category/ci",
+        "kind/native"
+    ],
+    "homepage": "https://github.com/pulumiverse",
+    "repository": "https://github.com/pulumiverse/pulumi-concourse",
+    "license": "Apache-2.0",
+    "scripts": {
+        "build": "tsc",
+        "install": "node scripts/install-pulumi-plugin.js resource concourse ${VERSION}"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^4.3.5"
+    },
+    "pulumi": {
+        "resource": true
+    }
+}

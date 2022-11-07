@@ -1,0 +1,166 @@
+{
+    "name": "concourse",
+    "displayName": "Concourse CI",
+    "description": "A Pulumi package for creating and managing Concourse CI resources.",
+    "keywords": [
+        "pulumi",
+        "concourse",
+        "category/ci",
+        "kind/native"
+    ],
+    "homepage": "https://github.com/pulumiverse",
+    "license": "Apache-2.0",
+    "repository": "https://github.com/pulumiverse/pulumi-concourse",
+    "publisher": "Pulumiverse",
+    "types": {
+        "concourse:index:Info": {
+            "description": "Server Information",
+            "properties": {
+                "cluster_name": {
+                    "type": "string"
+                },
+                "external_url": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "worker_version": {
+                    "type": "string"
+                }
+            },
+            "type": "object",
+            "required": [
+                "version",
+                "worker_version"
+            ]
+        },
+        "concourse:index:Get": {
+            "description": "Get step",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                }
+            },
+            "type": "object",
+            "required": [
+                "identifier"
+            ]
+        },
+        "concourse:index:Put": {
+            "description": "Put step",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                }
+            },
+            "type": "object",
+            "required": [
+                "identifier"
+            ]
+        },
+        "concourse:index:Task": {
+            "description": "Task step",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                }
+            },
+            "type": "object",
+            "required": [
+                "identifier"
+            ]
+        },
+        "concourse:index:Job": {
+            "description": "Job configuration",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                },
+                "plan": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/types/concourse:index:Get"
+                            },
+                            {
+                                "$ref": "#/types/concourse:index:Put"
+                            },
+                            {
+                                "$ref": "#/types/concourse:index:Task"
+                            }
+                        ]
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "identifier",
+                "plan"
+            ]
+        },
+        "concourse:index:PipelineConfig": {
+            "description": "Pipeline configuration",
+            "properties": {
+                "jobs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/concourse:index:Job"
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "jobs"
+            ]
+        }
+    },
+    "resources": {
+        "concourse:index:Pipeline": {
+            "isComponent": false,
+            "inputProperties": {
+                "team": {
+                    "type": "string",
+                    "description": "Team name"
+                },
+                "config": {
+                    "$ref": "#/types/concourse:index:PipelineConfig",
+                    "description": "Pipeline configuration"
+                }
+            },
+            "requiredInputs": [
+                "team"
+            ],
+            "properties": {}
+        }
+    },
+    "language": {
+        "csharp": {
+            "packageReferences": {
+                "Pulumi": "3.*"
+            },
+            "rootNamespace": "Pulumiverse"
+        },
+        "go": {
+            "generateResourceContainerTypes": true,
+            "importBasePath": "github.com/pulumiverse/pulumi-concourse/sdk/go/concourse"
+        },
+        "nodejs": {
+            "dependencies": {
+                "@pulumi/pulumi": "^3.0.0"
+            },
+            "packageName": "@pulumiverse/concourse"
+        },
+        "python": {
+            "packageName": "pulumiverse_concourse",
+            "requires": {
+                "pulumi": ">=3.0.0,<4.0.0"
+            }
+        }
+    },
+    "provider": {
+        "description": "The provider type for the concourse package.",
+        "type": "object"
+    }
+}
