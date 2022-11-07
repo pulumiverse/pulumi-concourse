@@ -2,7 +2,7 @@ name: main
 "on":
   push:
     branches:
-    - main*
+    - main
     paths-ignore:
     - CHANGELOG.md
     tags-ignore:
@@ -16,11 +16,9 @@ env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   NUGET_PUBLISH_KEY: ${{ secrets.NUGET_PUBLISH_KEY }}
   PROVIDER: concourse
-  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-  PULUMI_API: https://api.pulumi.com
   PULUMI_GO_DEP_ROOT: ${{ github.workspace }}/..
   PULUMI_LOCAL_NUGET: ${{ github.workspace }}/nuget
-  PULUMI_TEST_OWNER: "lbrlabs"
+  PULUMI_TEST_OWNER: "pulumiverse"
   PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
   PYPI_USERNAME: "__token__"
   TRAVIS_OS_NAME: linux
