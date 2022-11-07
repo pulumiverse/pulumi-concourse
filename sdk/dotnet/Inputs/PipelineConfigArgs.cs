@@ -14,7 +14,7 @@ namespace Pulumiverse.Concourse.Inputs
     /// <summary>
     /// Pipeline configuration
     /// </summary>
-    public sealed class PipelineConfigArgs : Pulumi.ResourceArgs
+    public sealed class PipelineConfigArgs : global::Pulumi.ResourceArgs
     {
         [Input("jobs", required: true)]
         private InputList<Inputs.JobArgs>? _jobs;
@@ -27,5 +27,6 @@ namespace Pulumiverse.Concourse.Inputs
         public PipelineConfigArgs()
         {
         }
+        public static new PipelineConfigArgs Empty => new PipelineConfigArgs();
     }
 }

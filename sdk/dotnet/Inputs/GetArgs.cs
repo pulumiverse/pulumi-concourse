@@ -14,7 +14,7 @@ namespace Pulumiverse.Concourse.Inputs
     /// <summary>
     /// Get step
     /// </summary>
-    public sealed class GetArgs : Pulumi.ResourceArgs
+    public sealed class GetArgs : global::Pulumi.ResourceArgs
     {
         [Input("identifier", required: true)]
         public Input<string> Identifier { get; set; } = null!;
@@ -22,5 +22,6 @@ namespace Pulumiverse.Concourse.Inputs
         public GetArgs()
         {
         }
+        public static new GetArgs Empty => new GetArgs();
     }
 }

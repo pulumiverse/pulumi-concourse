@@ -74,7 +74,7 @@ namespace Pulumiverse.Concourse
         }
     }
 
-    internal sealed class ConcourseResourceTypeAttribute : Pulumi.ResourceTypeAttribute
+    internal sealed class ConcourseResourceTypeAttribute : global::Pulumi.ResourceTypeAttribute
     {
         public ConcourseResourceTypeAttribute(string type) : base(type, Utilities.Version)
         {
