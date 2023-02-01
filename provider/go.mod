@@ -6,8 +6,8 @@ require (
 	github.com/concourse/concourse v1.6.1-0.20220616143911-0df06c23d158
 	github.com/golang/protobuf v1.5.2
 	github.com/pulumi/pulumi/pkg/v3 v3.46.0
-	github.com/pulumi/pulumi/sdk/v3 v3.46.0
-	google.golang.org/grpc v1.50.1
+	github.com/pulumi/pulumi/sdk/v3 v3.53.1
+	google.golang.org/grpc v1.51.0
 	google.golang.org/protobuf v1.28.1
 )
 
@@ -182,7 +182,7 @@ require (
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4 // indirect
 	golang.org/x/sys v0.0.0-20220823224334-20c2bfdbfe24 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
 	golang.org/x/xerrors v0.0.0-20220609144429-65e65417b02f // indirect
 	google.golang.org/api v0.91.0 // indirect
