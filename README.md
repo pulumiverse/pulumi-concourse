@@ -12,7 +12,8 @@ fly is an amazing tool, but configuring through scripts running fly is not ideal
 
 const providerConfig = new concourse.Provider("concourseProvider", {
   target: "target_name"
-}); ```
+});
+```
 
 ## Configure the provider (using a local username and password)
 Note: this is not basic authentication
@@ -22,7 +23,8 @@ Note: this is not basic authentication
   team: "main",
   username: "localuser",
   password: "very-secure-password"
-}); ```
+});
+```
 
 ## Look up all teams
 
@@ -42,7 +44,8 @@ export const {
   members,
   pipelineOperators,
   viewers
-} = myTeam;```
+} = myTeam;
+```
 
 ## Look up a pipeline
 
@@ -58,7 +61,8 @@ export const {
   isPaused,
   jsonConfig,
   yamlConfig
-} = myPipeline;```
+} = myPipeline;
+```
 
 ## Create a team
 
@@ -79,7 +83,8 @@ Specify users and groups by prefixing the strings:
   viewers: [
     "user:github:samrees"
   ]
-});```
+});
+```
 
 ## Create a pipeline
 
@@ -93,15 +98,22 @@ Specify users and groups by prefixing the strings:
   vars: {
     foo: "bar"
   }
-});```
+});
+```
 
 ## Import
 
 Concourse teams can be imported using the team name:
-```$ pulumi import concourse:team:Team myTeamResource my-team```
+
+```
+$ pulumi import concourse:team:Team myTeamResource my-team
+```
 
 Concourse pipelines can be imported using the team name and pipeline name:
-```$ pulumi import concourse:pipeline:Pipeline myPipelineResource my-team:my-app```
+
+```
+$ pulumi import concourse:pipeline:Pipeline myPipelineResource my-team:my-app
+```
 
 
 
