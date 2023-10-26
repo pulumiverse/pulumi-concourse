@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Pulumiverse.Concourse.Inputs
+namespace tejavar.Concourse.Inputs
 {
 
     /// <summary>

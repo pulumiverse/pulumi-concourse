@@ -1,14 +1,15 @@
 archives:
   - id: archive
-    name_template: '{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}'
+    name_template: "{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}"
 before:
   hooks:
-    - make gen
+    - make provider
 builds:
   - binary: pulumi-resource-concourse
     dir: provider
     env:
       - CGO_ENABLED=0
+      - GO111MODULE=on
     goarch:
       - amd64
       - arm64
@@ -17,13 +18,13 @@ builds:
       - windows
       - linux
     ldflags:
-      # The line below MUST align with the module in current provider/go.mod
-      - -X github.com/tejavar/pulumi-concourse/provider/pkg/version.Version={{.Tag }}
+      - -s
+      - -w
+      - -X github.com/tejavar/pulumi-concourse/provider/pkg/version.Version={{.Tag}}
     main: ./cmd/pulumi-resource-concourse/
 changelog:
   skip: true
 release:
   disable: false
-  prerelease: auto
 snapshot:
-  name_template: '{{ .Tag }}-SNAPSHOT'
+  name_template: "{{ .Tag }}-SNAPSHOT"

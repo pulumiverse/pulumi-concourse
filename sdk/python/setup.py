@@ -37,7 +37,7 @@ def readme():
         return "concourse Pulumi Package - Development Version"
 
 
-setup(name='pulumiverse_concourse',
+setup(name='tejavar_concourse',
       version=VERSION,
       description="A Pulumi package for creating and managing Concourse CI resources.",
       long_description=readme(),
@@ -46,14 +46,14 @@ setup(name='pulumiverse_concourse',
           'install': InstallPluginCommand,
       },
       keywords='pulumi concourse category/ci kind/native',
-      url='https://github.com/pulumiverse',
+      url='https://github.com/tejavar',
       project_urls={
-          'Repository': 'https://github.com/pulumiverse/pulumi-concourse'
+          'Repository': 'https://github.com/tejavar/pulumi-concourse'
       },
       license='Apache-2.0',
       packages=find_packages(),
       package_data={
-          'pulumiverse_concourse': [
+          'tejavar_concourse': [
               'py.typed',
               'pulumi-plugin.json',
           ]

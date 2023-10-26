@@ -17,8 +17,8 @@ package main
 
 import (
 	_ "embed"
-	"github.com/pulumiverse/pulumi-concourse/provider/pkg/provider"
-	"github.com/pulumiverse/pulumi-concourse/provider/pkg/version"
+	"github.com/tejavar/pulumi-concourse/provider/pkg/provider"
+	"github.com/tejavar/pulumi-concourse/provider/pkg/version"
 )
 
 var providerName = "concourse"
