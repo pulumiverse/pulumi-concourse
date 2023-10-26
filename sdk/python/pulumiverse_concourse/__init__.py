@@ -14,7 +14,7 @@ _utilities.register(
  {
   "pkg": "concourse",
   "mod": "index",
-  "fqn": "pulumiverse_concourse",
+  "fqn": "tejavar_concourse",
   "classes": {
    "concourse:index:Pipeline": "Pipeline"
   }
@@ -26,7 +26,7 @@ _utilities.register(
  {
   "pkg": "concourse",
   "token": "pulumi:providers:concourse",
-  "fqn": "pulumiverse_concourse",
+  "fqn": "tejavar_concourse",
   "class": "Provider"
  }
 ]

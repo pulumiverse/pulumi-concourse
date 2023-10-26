@@ -20,7 +20,7 @@ builds:
     ldflags:
       - -s
       - -w
-      - -X github.com/pulumiverse/pulumi-concourse/provider/pkg/version.Version={{.Tag}}
+      - -X github.com/tejavar/pulumi-concourse/provider/pkg/version.Version={{.Tag}}
     main: ./cmd/pulumi-resource-concourse/
 changelog:
   skip: true

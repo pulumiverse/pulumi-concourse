@@ -1,4 +1,4 @@
-module github.com/pulumiverse/pulumi-concourse/sdk/v3
+module github.com/tejavar/pulumi-concourse/sdk/v3
 
 go 1.18
 

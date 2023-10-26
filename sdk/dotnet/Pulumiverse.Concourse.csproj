@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Pulumiverse</Authors>
-    <Company>Pulumiverse</Company>
+    <Authors>tejavar</Authors>
+    <Company>tejavar</Company>
     <Description>A Pulumi package for creating and managing Concourse CI resources.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/pulumiverse</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/pulumiverse/pulumi-concourse</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/tejavar</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tejavar/pulumi-concourse</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
 
     <TargetFramework>netcoreapp3.1</TargetFramework>

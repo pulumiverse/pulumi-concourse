@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Pulumiverse.Concourse
+namespace tejavar.Concourse
 {
     /// <summary>
     /// The provider type for the concourse package.

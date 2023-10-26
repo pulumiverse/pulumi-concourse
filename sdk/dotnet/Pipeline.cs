@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace Pulumiverse.Concourse
+namespace tejavar.Concourse
 {
     [ConcourseResourceType("concourse:index:Pipeline")]
     public partial class Pipeline : global::Pulumi.CustomResource

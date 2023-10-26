@@ -8,10 +8,10 @@
         "category/ci",
         "kind/native"
     ],
-    "homepage": "https://github.com/pulumiverse",
+    "homepage": "https://github.com/tejavar",
     "license": "Apache-2.0",
-    "repository": "https://github.com/pulumiverse/pulumi-concourse",
-    "publisher": "Pulumiverse",
+    "repository": "https://github.com/tejavar/pulumi-concourse",
+    "publisher": "tejavar",
     "types": {
         "concourse:index:Info": {
             "description": "Server Information",
@@ -140,20 +140,20 @@
             "packageReferences": {
                 "Pulumi": "3.*"
             },
-            "rootNamespace": "Pulumiverse"
+            "rootNamespace": "tejavar"
         },
         "go": {
             "generateResourceContainerTypes": true,
-            "importBasePath": "github.com/pulumiverse/pulumi-concourse/sdk/go/concourse"
+            "importBasePath": "github.com/tejavar/pulumi-concourse/sdk/go/concourse"
         },
         "nodejs": {
             "dependencies": {
                 "@pulumi/pulumi": "^3.0.0"
             },
-            "packageName": "@pulumiverse/concourse"
+            "packageName": "@tejavar/concourse"
         },
         "python": {
-            "packageName": "pulumiverse_concourse",
+            "packageName": "tejavar_concourse",
             "requires": {
                 "pulumi": ">=3.0.0,<4.0.0"
             }
