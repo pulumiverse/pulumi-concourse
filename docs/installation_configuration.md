@@ -6,7 +6,7 @@ layout: installation
 
 ## Installation
 
-The Concours provider is available as a package in Go
+The Concours provider is available as a package in yaml, typescript and JSON
 
 
 
