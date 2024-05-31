@@ -1,0 +1,24 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        ":semanticCommitScopeDisabled",
+        "schedule:earlyMondays"
+    ],
+    "packageRules": [
+        {
+            "matchFileNames": [
+                "examples/**"
+            ],
+            "matchDatasources": [
+                "go"
+            ]
+        },
+        {
+            "matchFileNames": [
+                "sdk/**"
+            ],
+            "enabled": false
+        }
+    ],
+    "dependencyDashboard": true
+}
