@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/concourse/concourse v1.6.1-0.20220616143911-0df06c23d158
-	github.com/golang/protobuf v1.5.3
+	github.com/golang/protobuf v1.5.4
 	github.com/pulumi/pulumi/pkg/v3 v3.46.0
 	github.com/pulumi/pulumi/sdk/v3 v3.46.0
 	google.golang.org/grpc v1.56.3
