@@ -8,7 +8,7 @@ require (
 	github.com/pulumi/pulumi/pkg/v3 v3.46.0
 	github.com/pulumi/pulumi/sdk/v3 v3.46.0
 	google.golang.org/grpc v1.56.3
-	google.golang.org/protobuf v1.33.0
+	google.golang.org/protobuf v1.34.2
 )
 
 require (
