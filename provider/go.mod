@@ -1,6 +1,8 @@
 module github.com/pulumiverse/pulumi-concourse/provider
 
-go 1.18
+go 1.21
+
+toolchain go1.23.2
 
 require (
 	github.com/concourse/concourse v1.6.1-0.20220616143911-0df06c23d158
@@ -8,7 +10,7 @@ require (
 	github.com/pulumi/pulumi/pkg/v3 v3.46.0
 	github.com/pulumi/pulumi/sdk/v3 v3.46.0
 	google.golang.org/grpc v1.56.3
-	google.golang.org/protobuf v1.33.0
+	google.golang.org/protobuf v1.35.1
 )
 
 require (
